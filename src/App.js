@@ -10,7 +10,7 @@ function App() {
   }
   const [weth,setweth]=useState(null)
   async function fetchMoredata(){
-    let url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&appid=5e2563a9fa6890dfdfd7b85987b1d5ad&q=${value.city}`
+    let url = `https://api.openweathermap.org/data/2.5/weather?units=imperial&appid=5e2563a9fa6890dfdfd7b85987b1d5ad&q=${value.city}`
     let data = await fetch(url)
     let parsedData = await data.json()
     setweth(parsedData)
